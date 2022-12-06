@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && wsl touch out/.nojekyll && git add -f out/ && git commit -m 'test' && git subtree push --prefix out origin gh-subtree-pages"
+    "deploy": "next build && next export && wsl touch out/.nojekyll && git add -f out/ && git commit -m 'test' && git subtree push --prefix out sub-origin gh-subtree-pages"
   },
   "dependencies": {
     "eslint": "8.27.0",
