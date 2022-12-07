@@ -10,7 +10,6 @@ pipeline {
         stage("Deploy") {
             steps {
                 script {
-                    sh 'chmod +x /var/lib/jenkins/deploy/deploy.sh'
                     sh '/var/lib/jenkins/deploy/deploy.sh'
                 }
             }
