@@ -1,4 +1,5 @@
-node{
+node {
+  agent none 
   stages {
     //init stage 시작
     stage("init") {
