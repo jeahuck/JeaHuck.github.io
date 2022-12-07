@@ -1,15 +1,19 @@
 pipeline {
-    agent any
-    stages {
-        stage('Example') {
+     agent any
+     stages {
+        stage("Build") {
             steps {
-                echo 'Hello World'
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
+        stage("Deploy") {
+            steps {
+                script {
+                    sh 'sudo chmod +x /var/lib/jenkins/deploy/deploy.sh'
+                    sh 'sudo /var/lib/jenkins/deploy/deploy.sh'
+                }
+            }
         }
     }
 }
