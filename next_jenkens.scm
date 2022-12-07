@@ -1,25 +1,15 @@
-node {
-  agent any
-  stages {
-    //init stage 시작
-    stage("init") {
-      steps {
-        sh "echo init"
-      }
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
-
-    //build stage 시작
-    stage("build") {
-      steps {
-        sh "echo 'start build' "
-      }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
     }
- 
-    //deploy stage 시작
-    stage("deploy") {
-      steps {
-        sh "echo 'start deploy' "
-      }
-    }
-  }
 }
