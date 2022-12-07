@@ -16,18 +16,4 @@ node {
       sh "echo 'start deploy' "
     }
   }
-  post{
-	  always {
-    	echo 'always 문구'
-    }
-    changed {
-      echo 'changed 문구'
-    }
-    failure {
-      echo 'failure 문구'
-    }
-    success {
-      echo 'success 문구'
-    }
-  }
 }
