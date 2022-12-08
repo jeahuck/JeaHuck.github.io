@@ -3,6 +3,7 @@ pipeline {
      stages {
         stage("Build") {
             steps {
+                sh "pwd"
                 sh "npm install"
                 //sh "npm run build"
                 sh "npm run deploy-jenkins"
