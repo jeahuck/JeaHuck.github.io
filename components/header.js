@@ -19,6 +19,10 @@ export default function Header() {
               프로젝트
               프로젝트
             </Link>
+            <Link href="/projects" className="mr-5 hover:text-gray-900">
+              프로젝트
+              프로젝트
+            </Link>
             <a className="mr-5 hover:text-gray-900">연락하기</a>
           </nav>
 
